@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="warn" name="MyApp" packages="">
+  <Appenders>
+    <Console name="STDOUT" target="SYSTEM_OUT">
+      <PatternLayout pattern="%d  [%t] %-5level %logger{36} - %msg%n"/>
+    </Console>
+    <File name="MyFile" fileName="C:/Users/lprates/Desktop/jsf/app.log">
+      <PatternLayout>
+        <Pattern>%d  [%t] %-5level %logger{36} - %msg%n</Pattern>
+      </PatternLayout>
+    </File>
+    <Async name="Async">
+      <AppenderRef ref="MyFile"/>
+    </Async>
+  </Appenders>
+  
+  <Loggers>
+    <Root level="debug">
+      <AppenderRef ref="Async"/>
+      <AppenderRef ref="STDOUT"/>
+    </Root>
+  </Loggers>
+</Configuration>
