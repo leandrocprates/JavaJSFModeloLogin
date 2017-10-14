@@ -20,9 +20,9 @@ import org.apache.logging.log4j.Logger;
  
 @ManagedBean
 @SessionScoped
-public class UserLoginBean {
+public class LoginBean {
      
-    private static final Logger logger = LogManager.getLogger(UserLoginBean.class);    
+    private static final Logger logger = LogManager.getLogger(LoginBean.class);    
 
     TB_UsuarioDAO usuarioDAO = new TB_UsuarioDAO();
     
