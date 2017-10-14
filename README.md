@@ -7,6 +7,9 @@ Este projeto tem por objectivo a configuração do ambiente para utilizar o JSF 
 - Lombok - Para geração de Getter e Setter automaticos 
 - JDBC Puro 
 
+- Banco de dados do projeto encontrado na pasta **src/main/resources**.
+
+
 
 Pacote **com.jsf.javajsfmodelologin.bd** contem a classe **ConectarBD** de conexão no banco de dados 
 
