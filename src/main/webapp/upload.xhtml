@@ -23,13 +23,16 @@
             <p:fileUpload 
                           
                           fileUploadListener="#{fileBean.handleFileUpload}" 
-                          mode="advanced" dragDropSupport="false" auto="true"
+                          mode="advanced" dragDropSupport="false" auto="false"
                           multiple="true" update="messages"  fileLimit="3"
                           label="Selecionar"
                           uploadLabel="Carregar"
-                          cancelLabel="Cancelar"
-                          
-                          />
+                          cancelLabel="Cancelar">
+                
+                <f:attribute name="action" value="delete" />
+                <!--<f:param name="action" value="delete" />-->
+                
+            </p:fileUpload>
         </h:form>
         
     </h:body>

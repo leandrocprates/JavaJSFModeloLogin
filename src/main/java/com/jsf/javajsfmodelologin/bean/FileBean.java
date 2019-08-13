@@ -6,6 +6,7 @@
 package com.jsf.javajsfmodelologin.bean;
 
 
+import java.util.Map;
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.context.FacesContext;
@@ -34,6 +35,15 @@ public class FileBean {
     
     
     public void handleFileUpload(FileUploadEvent event) {
+        
+        
+        Map<String,String> params = 
+                FacesContext.getCurrentInstance().getExternalContext().getRequestParameterMap();
+	String action = params.get("action");        
+        System.out.println("Valor: " + action );
+        
+        
+        
         System.out.println("Arquivo carregado: " + event.getFile().getFileName());
         System.out.println( Thread.currentThread().getId() +"-"+ Thread.currentThread().getName());
         FacesMessage msg = new FacesMessage("Succesful", event.getFile().getFileName() + " is uploaded.");
