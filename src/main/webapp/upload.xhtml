@@ -21,7 +21,12 @@
         <h:form>  
             <p:growl id="messages" showDetail="true" />  
             <p:fileUpload fileUploadListener="#{fileBean.handleFileUpload}" mode="advanced" dragDropSupport="false"
-                          multiple="true" update="messages"  fileLimit="3" />
+                          multiple="true" update="messages"  fileLimit="3"
+                          label="Selecionar"
+                          uploadLabel="Carregar"
+                          cancelLabel="Cancelar"
+                          
+                          />
         </h:form>
         
     </h:body>
