@@ -16,6 +16,7 @@ import org.primefaces.model.UploadedFile;
 @ManagedBean
 public class FileBean {
 
+    private String valor;
     private UploadedFile file;
 
     public void upload() {
@@ -37,6 +38,14 @@ public class FileBean {
         System.out.println( Thread.currentThread().getId() +"-"+ Thread.currentThread().getName());
         FacesMessage msg = new FacesMessage("Succesful", event.getFile().getFileName() + " is uploaded.");
         FacesContext.getCurrentInstance().addMessage(null, msg);
+    }
+
+    public String getValor() {
+        return valor;
+    }
+
+    public void setValor(String valor) {
+        this.valor = valor;
     }
     
     
