@@ -60,11 +60,11 @@
         
         <!-- Gera Geter e Seter  -->        
         <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>1.16.16</version>
-	</dependency>        
-
+		<groupId>org.projectlombok</groupId>
+		<artifactId>lombok</artifactId>
+		<version>1.18.8</version>
+		<scope>provided</scope>
+	</dependency>
         <!-- Arquivos de log  -->      
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>

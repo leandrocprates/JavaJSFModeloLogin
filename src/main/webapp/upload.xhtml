@@ -1,0 +1,28 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core" >
+    <h:head>
+        <title>Upload de Arquivos</title>
+    </h:head>
+    <h:body>
+        <h2>Upload 1 Arquuivo</h2>
+        
+        <h:form enctype="multipart/form-data">
+                <p:growl id="messages" showDetail="true" />
+                <p:fileUpload value="#{fileBean.file}" mode="simple" skinSimple="true" />
+                <p:commandButton value="Submit" ajax="false" action="#{fileBean.upload}"  />
+        </h:form>
+        
+        <p></p>
+        
+        <h2>Upload 2 Arquivos</h2>
+        
+        <h:form>  
+            <p:growl id="messages" showDetail="true" />  
+            <p:fileUpload fileUploadListener="#{fileBean.handleFileUpload}" mode="advanced" dragDropSupport="false"
+                          multiple="true" update="messages"  fileLimit="3" />
+        </h:form>
+        
+    </h:body>
+</html>
