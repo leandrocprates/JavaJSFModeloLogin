@@ -33,6 +33,12 @@
                 <!--<f:param name="action" value="delete" />-->
                 
             </p:fileUpload>
+            
+            <p:inputText id="campo" value="#{fileBean.texto}" >
+                <p:ajax event="blur" update="out" listener="#{fileBean.onChange}" />
+            </p:inputText>
+            <h:outputText id="out" value="#{fileBean.texto}" />
+            
         </h:form>
         
     </h:body>

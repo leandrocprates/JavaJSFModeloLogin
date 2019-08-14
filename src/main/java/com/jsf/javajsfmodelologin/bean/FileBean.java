@@ -17,6 +17,7 @@ import org.primefaces.model.UploadedFile;
 @ManagedBean
 public class FileBean {
 
+    private String texto ; 
     private String valor;
     private UploadedFile file;
 
@@ -36,6 +37,7 @@ public class FileBean {
     
     public void handleFileUpload(FileUploadEvent event) {
         
+        System.out.println("Campo texto: "+ texto);
         
         Map<String,String> params = 
                 FacesContext.getCurrentInstance().getExternalContext().getRequestParameterMap();
@@ -50,6 +52,11 @@ public class FileBean {
         FacesContext.getCurrentInstance().addMessage(null, msg);
     }
 
+    public void onChange(){
+        System.out.println("Campo texto: "+ texto);
+    }
+    
+    
     public String getValor() {
         return valor;
     }
@@ -57,7 +64,13 @@ public class FileBean {
     public void setValor(String valor) {
         this.valor = valor;
     }
-    
-    
+
+    public String getTexto() {
+        return texto;
+    }
+
+    public void setTexto(String texto) {
+        this.texto = texto;
+    }
     
 }
