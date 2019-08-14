@@ -39,9 +39,8 @@ public class FileBean {
         
         System.out.println("Campo texto: "+ texto);
         
-        Map<String,String> params = 
-                FacesContext.getCurrentInstance().getExternalContext().getRequestParameterMap();
-	String action = params.get("action");        
+        
+	String action = (String) event.getComponent().getAttributes().get("action");        
         System.out.println("Valor: " + action );
         
         
